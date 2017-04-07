@@ -1,11 +1,21 @@
 {
-  "name": "activecollab.js",
-  "version": "1.0.0",
+  "name": "activecollabjs",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {},
   "keywords": ["activecollab", "js", "api"],
   "author": "cleanAndrew",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleanAndrew/activecollab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cleanAndrew/activecollab/issues"
+  },
+  "homepage": "https://github.com/cleanAndrew/activecollab#readme",
+
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
