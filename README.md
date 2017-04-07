@@ -11,7 +11,7 @@
 
 
 ```javascript
-const ac = require('activecollabjs');
+const ac = require('activecollabjs')();
 
 ac.init({
   username: 'member@activecollab.com',

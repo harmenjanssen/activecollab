@@ -6,7 +6,11 @@ const request = require('request');
 /**
  * @constructor ActiveCollabJS
  */
-const ActiveCollabJS = function() {};
+const ActiveCollabJS = function() {
+  if (!(this instanceof ActiveCollabJS)) {
+    return new ActiveCollabJS();
+  }
+};
 
 
 /**
