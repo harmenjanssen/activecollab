@@ -93,10 +93,10 @@ ActiveCollabJS.prototype.api = function(method, params = {}, callback) {
     'X-Angie-AuthApiToken': this.token
   });
 
-  let settings = _.assign(params, {
-    method: params.method || 'GET',
-    headers: headers
-  });
+  let settings = _.assign({
+    json: true,
+    method: 'GET'
+  }, params, { headers: headers });
 
   this.__request(method, settings, callback);
 };
