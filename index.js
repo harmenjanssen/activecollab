@@ -66,9 +66,28 @@ ActiveCollabJS.prototype.init = function(params, callback) {
  * @return {issueToken~response}      :: callback
  */
 ActiveCollabJS.prototype.__request = function(method, params, callback) {
-  let url = this.host + path.join('api/v1/', method);
+  const host = this.host.endsWith("/") ? this.host : `${this.host}/`
+  const url = host + path.join('api/v1/', method);
 
   request(url, params, (err, res, body) => callback(err, body));
+};
+
+
+/**
+ * Set host
+ * @param  {String}   host            :: the host to use in requests
+ */
+ActiveCollabJS.prototype.setHost = function(host) {
+  this.host = host;
+};
+
+
+/**
+ * Set previously obtained token
+ * @param  {String}   token           :: the token
+ */
+ActiveCollabJS.prototype.setToken = function(token) {
+  this.token = token;
 };
 
 
